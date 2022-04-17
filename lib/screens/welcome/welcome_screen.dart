@@ -22,15 +22,29 @@ class WelcomeScreen extends StatelessWidget {
               Spacer(),
               Center(
                 child: Text(
-                  'クイズを始めよう！',
-                  style: Theme.of(context).textTheme.headline4?.copyWith(
-                      color: Colors.white, fontWeight: FontWeight.bold),
+                  'サッカークイズを始めよう！',
+                  style: Theme.of(context).textTheme.headline5?.copyWith(
+                      color: Colors.black, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
               ),
               Text(
                 "名前を入力してください",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
+              ),
+              SizedBox(height: 10),
+              Container(
+                width: 300,
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey,
+                    hintText: "名前",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                    ),
+                  ),
+                ),
               ),
               Spacer(),
             ],
