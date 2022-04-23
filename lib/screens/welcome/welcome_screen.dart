@@ -19,7 +19,7 @@ class WelcomeScreen extends StatelessWidget {
           SafeArea(
               child: Column(
             children: [
-              Spacer(),
+              SizedBox(height: 100),
               Center(
                 child: Text(
                   'サッカークイズを始めよう！',
@@ -32,13 +32,13 @@ class WelcomeScreen extends StatelessWidget {
                 "名前を入力してください",
                 style: TextStyle(color: Colors.black),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Container(
                 width: 300,
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey,
+                    fillColor: Colors.blueAccent,
                     hintText: "名前",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -46,7 +46,38 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer(),
+              SizedBox(height: 50),
+              ElevatedButton.icon(
+                onPressed: () {
+                  // Navigator.push(
+                  //     context,
+                  //     PageRouteBuilder(
+                  //       pageBuilder: (context, animation, secondaryAnimation) =>
+                  //           CreateAccountPage(),
+                  //       transitionsBuilder:
+                  //           (context, animation, secondaryAnimation, child) {
+                  //         return FadeUpwardsPageTransitionsBuilder()
+                  //             .buildTransitions(
+                  //                 MaterialPageRoute(
+                  //                     builder: (context) =>
+                  //                         CreateAccountPage()),
+                  //                 context,
+                  //                 animation,
+                  //                 secondaryAnimation,
+                  //                 child);
+                  //       },
+                  //     ));
+                },
+                icon: Icon(
+                  Icons.start,
+                  color: Colors.black,
+                ),
+                label: Text(
+                  'クイズを始める！',
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                ),
+              ),
             ],
           ))
         ],
