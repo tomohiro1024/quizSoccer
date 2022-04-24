@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_soccer/screens/welcome/welcome_screen.dart';
+import 'package:quiz_soccer/screens/quiz/quiz_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomeScreen(),
+      home: const QuizScreen(),
     );
   }
 }
